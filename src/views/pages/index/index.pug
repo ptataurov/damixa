@@ -11,6 +11,24 @@ block content
     div(class='container')
       +breadcrumbs
 
-      div(class=css.productList)
-        each product in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-          +product-card
+      div(class=css.app)
+        +filters
+        
+        div(class=css.products)
+          div(class=css.productList)
+            each product in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              +product-card
+
+          button(class=css.showMoreBtn) Показать еще
+
+          div(class=css.pagination)
+            a(class=css.prev href='#')
+              img(class=css.arrowIcon src=require('./img/pagination-arrow.svg') alt='Стрелка назад')
+            a(class=css.pageLink href='#') 1
+            a(class=css.pageLink class='active' href='#') 2
+            a(class=css.pageLink href='#') 3
+            a(class=css.pageLink href='#') ...
+            a(class=css.pageLink href='#') 8
+            a(class=css.next href='#')
+              img(class=css.arrowIcon src=require('./img/pagination-arrow.svg') alt='Стрелка вперед')
+

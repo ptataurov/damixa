@@ -1,0 +1,32 @@
+mixin filters(mixes)
+
+  - const data = require('views/components/filters/data.js')
+  - const css = require('views/components/filters/_css.json')
+
+  div(class=css.filters class=mixes)
+
+    div(class=css.resetFiltesGroup)
+      span(class=css.resetFilter) Сбросить фильтр
+        button
+
+    div(class=css.group)
+      span(class=css.subtitle) Тип
+      +select
+
+    div(class=css.group)
+      span(class=css.subtitle) Категория
+      div(class=css.categories)
+        each category in ['Смесители', 'Душевое оборудование', 'Унитазы', 'Мебель для ванной', 'Ванны', 'Аксессуары']
+          a(class=css.categoryLink href='#')= category
+    
+    div(class=css.group)
+      span(class=css.subtitle) Группа
+      ul(class=css.checkboxList)
+        each label in ['Группа кухонных', 'Группа кухонных смесителей', 'Группа кухонных смесителей с очень длинным названием', 'Группа кухонных смесителей', 'Группа кухонных']
+          +checkbox-count({ label })
+
+    div(class=css.group)
+      span(class=css.subtitle) Серия
+      ul(class=css.checkboxList)
+        each label in ['A-Pex', 'Arc', 'Bell', 'Clover Easy', 'Clover Green', 'Osier', 'Pine', 'Rowan', 'Silhouet', 'Slate', 'Space', 'Titan', 'Tradition', 'Venus', 'Willow']
+          +checkbox-count({ label })

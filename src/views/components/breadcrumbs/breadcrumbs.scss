@@ -1,24 +1,23 @@
 .breadcrumbs {
   display: flex;
-  padding: 20px 0;
   flex-wrap: wrap;
+  padding: 20px 0;
 
   li {
     display: flex;
     align-items: center;
-
-    font-size: 11px;
     color: #4a4a4a;
+    font-size: 11px;
 
     &:not(:last-child) {
       &:after {
-        content: '';
-        background: url('~@/components/breadcrumbs/img/delimiter.svg') center
-          no-repeat;
+        display: inline-block;
         width: 6px;
         height: 6px;
-        display: inline-block;
         padding: 0 10px;
+        background: url('~@/components/breadcrumbs/img/delimiter.svg') center
+          no-repeat;
+        content: '';
       }
     }
   }

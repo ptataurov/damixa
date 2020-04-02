@@ -1,0 +1,13 @@
+mixin checkbox-count({ label }, mixes)
+
+  - const data = require('views/components/checkbox-count/data.js')
+  - const css = require('views/components/checkbox-count/_css.json')
+
+  div(class=css.checkboxCount class=mixes)
+    label
+      input(type='checkbox')
+      span(class=css.customCheckbox)
+      = label
+    span(class=css.count) (125)
+
+

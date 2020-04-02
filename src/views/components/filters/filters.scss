@@ -1,0 +1,106 @@
+.filters {
+  max-width: 202px;
+}
+
+.resetFilter {
+  font-size: 14px;
+  background: rgba(236, 236, 237, 0.5);
+  border-radius: 3px;
+  padding: 11px 16px 9px;
+
+  color: #414042;
+
+  display: flex;
+
+  button {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-left: auto;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: rgba(65, 64, 66, 0.3);
+      top: 50%;
+      left: 50%;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.resetFiltesGroup {
+  margin-bottom: 30px;
+}
+
+.group {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  color: #414042;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.checkboxList {
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryLink {
+  font-size: 14px;
+  color: #414042;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+// Global styles
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

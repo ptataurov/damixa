@@ -1,0 +1,14 @@
+mixin footer(mixes)
+
+  - const data = require('views/components/footer/data.js')
+  - const css = require('views/components/footer/_css.json')
+
+  div(class=css.footer class=mixes)
+    div(class='container')
+      div(class=css.content)
+        a(class=css.logoLink href='#')
+          img(class=css.logo src=require('public/img/logo.svg') alt='Логотип damixa')
+        
+        div(class=css.links)
+          each link in ['Товары', 'Серии', 'Дизайнеры']
+            a(class=css.link href='#')= link

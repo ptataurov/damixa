@@ -1,0 +1,11 @@
+mixin select(mixes)
+
+  - const data = require('views/components/select/data.js')
+  - const css = require('views/components/select/_css.json')
+
+  div(class=css.select class=mixes)
+    select
+      each option in [1, 2, 3, 4]
+        option(value=option)= `Тест ${option}`
+    
+    img(class=css.icon src=require('views/components/select/img/arrow.svg') alt='Иконка')
