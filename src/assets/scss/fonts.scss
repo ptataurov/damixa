@@ -1,0 +1,14 @@
+@include import-font('Montserrat', 700) {
+  src: url('../../public/fonts/woff/TheinhardtPan-Bold.woff') format('woff'),
+    url('../../public/fonts/woff2/TheinhardtPan-Bold.woff2') format('woff2');
+}
+
+@include import-font('Montserrat', 500) {
+  src: url('../../public/fonts/woff/TheinhardtPan-Medium.woff') format('woff'),
+    url('../../public/fonts/woff2/TheinhardtPan-Medium.woff2') format('woff2');
+}
+
+@include import-font('Montserrat', 400) {
+  src: url('../../public/fonts/woff/TheinhardtPan-Regular.woff') format('woff'),
+    url('../../public/fonts/woff2/TheinhardtPan-Regular.woff2') format('woff2');
+}

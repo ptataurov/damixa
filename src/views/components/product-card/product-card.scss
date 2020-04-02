@@ -1,0 +1,168 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 349px;
+}
+
+.productImgContainer {
+  height: 202px;
+  position: relative;
+  margin-bottom: 15px;
+
+  @include flex;
+}
+
+.captionGroup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.caption {
+  font-weight: bold;
+  font-size: 11px;
+
+  color: #ffffff;
+  border-radius: 1px;
+  padding: 3px 5px 2px;
+
+  &:global(.black) {
+    background-color: #000;
+  }
+
+  &:global(.gray) {
+    background-color: #414042;
+  }
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+.productImg {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.imgContainerFooter {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.awardsGroup {
+  margin-left: auto;
+}
+
+.awardImg {
+  max-width: 50px;
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+}
+
+.controlBtn {
+  display: inline-flex;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.num {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 11px;
+  color: #414042;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  color: #414042;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.priceGroup {
+  white-space: nowrap;
+}
+
+.oldPriceGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.oldPrice {
+  color: #a09fa0;
+  text-decoration: line-through;
+  font-size: 13px;
+  margin-right: 7px;
+}
+
+.discount {
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #e87018;
+  border: 1px solid #e87018;
+  padding: 2px 5px 0;
+  border-radius: 2px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #414042;
+}
+
+.btn {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px 16px 4px;
+  color: #ffffff;
+  background: #e87018;
+  border-radius: 3px;
+}
+
+// Global styles
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

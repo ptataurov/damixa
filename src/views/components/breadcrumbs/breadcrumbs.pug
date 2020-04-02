@@ -1,0 +1,10 @@
+mixin breadcrumbs(mixes)
+
+  - const items = require('views/components/breadcrumbs/data.js')
+  - const css = require('views/components/breadcrumbs/_css.json')
+
+  ul(class=css.breadcrumbs class=mixes)
+    each item, idx in items
+      li
+        a= item
+

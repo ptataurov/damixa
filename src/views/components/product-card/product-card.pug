@@ -1,0 +1,30 @@
+mixin product-card(mixes)
+
+  - const data = require('views/components/product-card/data.js')
+  - const css = require('views/components/product-card/_css.json')
+
+  div(class=css.productCard class=mixes)
+    div(class=css.productImgContainer)
+      div(class=css.captionGroup)
+        span(class=css.caption class='black') Суперцена
+        span(class=css.caption class='gray') -10%
+      img(class=css.productImg src=require('views/components/product-card/img/product-img-2.png') alt='Изображение продукта')
+      footer(class=css.imgContainerFooter)
+        div(class=css.control)
+          button(class=css.controlBtn)
+            include ~@/components/product-card/img/icon-favourites.svg
+          button(class=css.controlBtn)
+            include ~@/components/product-card/img/icon-compare.svg
+        div(class=css.awardsGroup)
+          img(class=css.awardImg src=require('views/components/product-card/img/reddot-winner-logo.png') alt='Изображение награды')
+    span(class=css.num) 73000000
+    h6(class=css.name) Смеситель для кухни Damixa A-Pex с выдвижным изливом
+    footer(class=css.footer)
+      div(class=css.priceGroup)
+        div(class=css.oldPriceGroup)
+          span(class=css.oldPrice) 44 990 ₽
+          span(class=css.discount) -8 000
+        span(class=css.price) 36 990 ₽
+      button(class=css.btn) Купить онлайн
+
+

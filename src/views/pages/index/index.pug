@@ -1,0 +1,16 @@
+extends ~@/layout
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+  - const css = require('./_css.json')
+
+  div(id='index-pg' class=css.indexPg)
+    div(class='container')
+      +breadcrumbs
+
+      div(class=css.productList)
+        each product in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          +product-card

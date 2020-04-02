@@ -1,0 +1,168 @@
+.header {
+}
+
+.container {
+  @include container;
+}
+
+.top {
+  padding: 4px 0;
+  background-color: #e1e1e1;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.call {
+  display: flex;
+  align-items: center;
+
+  > * {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.callLabel {
+  color: #4a4a4a;
+  font-size: 11px;
+}
+
+.phoneLink {
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.orderCall {
+  color: #e87018;
+  font-size: 11px;
+
+  &:hover {
+    color: #4a4a4a;
+  }
+}
+
+.topNav {
+  margin-left: auto;
+}
+
+.topLink {
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.main {
+  .container {
+    display: flex;
+    align-items: center;
+    height: 90px;
+  }
+}
+
+.mainNav {
+  display: flex;
+  align-self: flex-end;
+  height: 47px;
+  margin-left: 110px;
+}
+
+.mainLink {
+  color: #4a4a4a;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &:global(.active) {
+    border-bottom: 3px solid #000;
+  }
+
+  &:hover {
+    border-bottom: 3px solid #000;
+  }
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  > * {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    img {
+      transition: transform 200ms;
+    }
+
+    &:hover {
+      img {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+.favouritesLink,
+.cartLink {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 21px;
+  height: 13px;
+  padding-top: 2px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  background: $accentColor;
+  border-radius: 2px;
+  text-align: center;
+}
+
+// Global styles
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation
